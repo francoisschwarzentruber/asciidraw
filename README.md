@@ -1,2 +1,4 @@
 # asciidraw
-Draw a picture from ASCIIart
+Draw a picture from ASCIIart. For instance:
+
+<img src="screenshot.png"/>
