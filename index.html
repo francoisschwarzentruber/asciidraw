@@ -9,7 +9,8 @@
         }
 
         textarea {
-            position: absolute;
+        /*    position: absolute;*/
+        display: inline;
             background: rgba(0, 0, 0, 0);
             color: rgba(0, 0, 0, 0.1);
             transition: all 1000ms;
@@ -23,8 +24,7 @@
         }
 
         canvas {
-            position: absolute;
-
+            display: inline;
         }
     </style>
 
@@ -34,8 +34,8 @@
 
 <body>
     <div>
-        <canvas id="canvas" width=800 height=600></canvas>
-    <textarea style="vertical-align: top;" id="textarea" cols=40 rows=20>
+     
+    <textarea class="edit" style="vertical-align: top;" id="textarea" cols=40 rows=20>
     ---------
     | hello |------
     ---------      \
@@ -50,7 +50,7 @@
                 | a | b | c | ...
                 ----------------------
     </textarea>
-
+    <canvas id="canvas" width=800 height=600></canvas>
     </div>
 
 </body>
