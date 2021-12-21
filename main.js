@@ -2,16 +2,21 @@ const CELLSIZEX = 7.5;
 const CELLSIZEY = 14;
 
 window.onload = () => {
-    textarea.oninput = () => {
+
+
+
+    const wakeup = () => {
         textarea.classList.add("edit");
         setTimeout(() => textarea.classList.remove("edit"), 2000);
-        load(textarea.value);
-        
     }
 
-    textarea.onclick = () => {
-        textarea.classList.add("edit");
-        setTimeout(() => textarea.classList.remove("edit"), 2000);
+    textarea.onclick = wakeup;
+    textarea.onkeydown = wakeup;
+
+    textarea.oninput = () => {
+        wakeup();
+        load(textarea.value);
+
     }
 
     load(textarea.value);
